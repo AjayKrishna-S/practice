@@ -21,7 +21,30 @@
                 return arr
             };
            console.log(minMax(arr)); 
- 
+            
+           //Min Max Sum
+
+           function miniMaxSum(arr) {
+            arr.sort((a,b) => a - b);
+            
+            let min = 0;
+            let max = 0;
+            
+            for (let i = 0 ; i < arr.length; i++){        
+                if (i < arr.length - 1){
+                    min += arr[i];
+                }
+                
+                if (i != 0){
+                    max += arr[i];
+                }
+            }
+            console.log(min + " " + max)
+        }
+
+        miniMaxSum(arr);
+
+
     </script>
 </body>
 </html>
