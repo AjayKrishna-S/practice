@@ -31,3 +31,37 @@ public class object
 
 
 ----------------------------------------------------------------------------
+
+
+class computer
+{
+
+    public void playMusic()
+    {
+        System.out.println("playing music");
+    }
+
+    public String getMeAPen(int cost)
+    {
+        if(cost >= 10)
+            return "pen";
+
+        return "you need more money";
+    }
+}
+
+public class object
+{
+    public static void main(String args[])
+    {
+        computer obj = new computer();
+
+        obj.playMusic();
+        String result = obj.getMeAPen(5);
+        
+        System.out.println(result);
+    }
+}
+
+
+---------------------------------------------------------------------------
