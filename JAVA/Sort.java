@@ -1,7 +1,26 @@
 
 import java.util.Arrays;
 
-public class Sort {
+
+class Computer
+{
+    int num;
+    public int contains(int n, int arr[])
+    {
+        for(int i = 0; i < arr.length; i++)
+        {
+            if(n == arr[i])
+            {
+                System.out.println("true " + i);
+                return 0;
+            }
+        }
+        System.out.println("false");
+        return 0;
+    }
+}
+
+public class sort {
     
     public static void main(String args[])
     {
@@ -34,14 +53,14 @@ public class Sort {
         //print the grid
 
 
-        for(int i = 0; i <= 10; i++)
-        {
-            for(int j = 0; j <= 10; j++)
-            {
-                System.out.print("* ");
-            }
-            System.out.println();
-        }
+        // for(int i = 0; i <= 10; i++)
+        // {
+        //     for(int j = 0; j <= 10; j++)
+        //     {
+        //         System.out.print("* ");
+        //     }
+        //     System.out.println();
+        // }
     
 
         // calculate the average value of array elements
@@ -49,11 +68,18 @@ public class Sort {
         int arr[] = {5, 6, 7, 9, 1, 3};
         int sum = 0;
 
-        for(int i = 0; i < (arr.length); i++ )
-        {
-            sum += arr[i];
-        }
-        System.out.println(sum / (arr.length));
-        
+        // for(int i = 0; i < (arr.length); i++ )
+        // {
+        //     sum += arr[i];
+        // }
+        // System.out.println(sum / (arr.length));
+
+        // test if an array contains a specific value
+
+
+
+        Computer find = new Computer();
+        find.contains(6, arr);        
     }
 }
+
