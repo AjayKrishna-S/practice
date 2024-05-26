@@ -29,6 +29,11 @@ public class Sort {
 
         System.out.println("sort : " + Arrays.toString(my_array2));
 
+
+
+        //print the grid
+
+
         for(int i = 0; i <= 10; i++)
         {
             for(int j = 0; j <= 10; j++)
@@ -37,8 +42,18 @@ public class Sort {
             }
             System.out.println();
         }
-    }
-
-
     
+
+        // calculate the average value of array elements
+
+        int arr[] = {5, 6, 7, 9, 1, 3};
+        int sum = 0;
+
+        for(int i = 0; i < (arr.length); i++ )
+        {
+            sum += arr[i];
+        }
+        System.out.println(sum / (arr.length));
+        
+    }
 }
