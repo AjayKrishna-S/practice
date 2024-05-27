@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Dresses
 {   
 
@@ -68,18 +70,32 @@ public class arr {
 
             int arr[] = {5, 6, 7, 2, 4 };
 
-            int n = 7;
-            int idx = -1;
+            // int n = 7;
+            // int idx = -1;
 
-            for(int i = 0; i < arr.length; i++)
+            // for(int i = 0; i < arr.length; i++)
+            // {
+            //     if(arr[i] == n)
+            //     {
+            //         idx = i;
+            //     }
+            // };
+
+            // System.out.println(idx);
+
+
+            // to remove a specific element from an array
+
+
+            int idx = 1;
+
+            for(int i = idx; i < arr.length - 1; i++)
             {
-                if(arr[i] == n)
-                {
-                    idx = i;
-                }
+                arr[i] = arr[i + 1];
             };
 
-            System.out.println(idx);
-        
+            arr[arr.length - 1 ] = 0;
+
+            System.out.println(Arrays.toString(arr));
     }
 }
