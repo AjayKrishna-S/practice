@@ -13,6 +13,8 @@ class Computer
             {
                 System.out.println("true " + i);
                 return 0;
+
+
             }
         }
         System.out.println("false");
@@ -29,24 +31,38 @@ public class sort {
             1458, 2458, 1254, 1472, 2365, 
             1456, 2165, 1457, 2456
         };
+
+        int nums[][] = new int[3][4];
+
+
+        //enhance for loop
+        for(int n[] : nums)
+        {
+            for(int m : n)
+            {
+                m = (int)(Math.random() * 10);
+                System.out.print(m + " ");
+            }
+            System.out.println();
+        }
         
 
-        String my_array2[] = {
-            "Java",
-            "Python",
-            "PHP",
-            "C#",
-            "C Programming",
-            "C++"
-        };  
+        // String my_array2[] = {
+        //     "Java",
+        //     "Python",
+        //     "PHP",
+        //     "C#",
+        //     "C Programming",
+        //     "C++"
+        // };  
 
-        Arrays.sort(my_array1);
+        // Arrays.sort(my_array1);
 
-        System.out.println("sort : " + Arrays.toString(my_array1));
+        // System.out.println("sort : " + Arrays.toString(my_array1));
 
-        Arrays.sort(my_array2);
+        // Arrays.sort(my_array2);
 
-        System.out.println("sort : " + Arrays.toString(my_array2));
+        // System.out.println("sort : " + Arrays.toString(my_array2));
 
 
 
@@ -79,7 +95,8 @@ public class sort {
 
 
         Computer find = new Computer();
-        find.contains(6, arr);        
+        find.contains(6, arr);      
+          
     }
 }
 
