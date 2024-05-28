@@ -87,15 +87,16 @@ public class arr {
             // to remove a specific element from an array
 
 
-            int idx = 1;
+            // int idx = 1;
 
-            for(int i = idx; i < arr.length - 1; i++)
-            {
-                arr[i] = arr[i + 1];
-            };
+            // for(int i = idx; i < arr.length - 1; i++)
+            // {
+            //     arr[i] = arr[i + 1];
+            // };
 
-            arr[arr.length - 1 ] = 0;
+            // arr[arr.length - 1 ] = 0;
 
-            System.out.println(Arrays.toString(arr));
+            // System.out.println(Arrays.toString(arr));
+
     }
 }

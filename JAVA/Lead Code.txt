@@ -1,0 +1,25 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int sum = 0;
+        int idx[] = new int[2];
+        String val = "false";
+        for(int i = 0; i < nums.length; i++)
+        {
+            for(int j = 1; j < nums.length; j++)
+            {
+                sum = (nums[i] + nums[j]);
+                if(target == sum && i != j){
+                    idx[0] = i;
+                    idx[1] = j;
+                    val = "true";
+                }
+            }
+            if(val == "true")
+            {
+                val = "false";
+                break;
+            }
+        }
+        return idx;
+    }
+}
