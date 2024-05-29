@@ -43,8 +43,5 @@ public class Notes
         //This & Super
 
         B obj = new B(5);
-
-
-
     }
 }
