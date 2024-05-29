@@ -73,7 +73,7 @@ public class Notes
     public static void main(String args[])
     {
 
-       // Naming Convinsion
+       // Naming Convention
 
             // Class and Interface - Calc, Runable
             // variable and method - marks, show()
@@ -92,3 +92,10 @@ public class Notes
         
     }
 }
+
+----------------------------------------------------------------------------
+
+                    //OOPS
+        //Inheritance
+        // JAVA does't allow multible inheritance( becouse of amiguity)
+        
