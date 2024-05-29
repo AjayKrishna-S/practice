@@ -121,7 +121,7 @@
 
 //    console.log(hourglassSum(arr1));
 
-
+//-----------------------------------------------------------------------------
    // Select all elements with the class 'number'
 // const nodeList = document.querySelectorAll('.number');
 
@@ -142,13 +142,29 @@
 // console.log('Array of numbers:', numberArray);
 
 
-let l1 = arrayToList([9, 9, 9, 9, 9, 9]);
-let l2 = arrayToList([9, 9, 9, 9]);
+// let l1 = arrayToList([9, 9, 9, 9, 9, 9]);
+// let l2 = arrayToList([9, 9, 9, 9]);
 
-printList(l1); // Expected output: 9 -> 9 -> 9 -> 9 -> 9 -> 9
-printList(l2); // Expected output: 9 -> 9 -> 9 -> 9
+// printList(l1); // Expected output: 9 -> 9 -> 9 -> 9 -> 9 -> 9
+// printList(l2); // Expected output: 9 -> 9 -> 9 -> 9
 
 // console.log(l1);
+
+// const operation = () =>{
+//     console.log("hello");
+// }
+
+let MyPromise = new Promise((a, b)=>{
+    b();
+})
+
+MyPromise.then(()=>{
+    console.log("hello");
+}).catch(()=>{
+    console.log("no result");
+})
+
+
     </script>
 </body>
 </html>
