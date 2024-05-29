@@ -3,118 +3,152 @@
     <title>practice</title>
 </head>
 <body>
+    <div class="number">9</div>
+    <div class="number">9</div>
+    <div class="number">9</div>
+    <div class="number">9</div>
+    <div class="number">9</div>
+    <div class="number">9</div>
     <script>
         //MinMax
-        const arr = [12, 55 ,24, 5, 9,];
+//         const arr = [12, 55 ,24, 5, 9,];
 
-            function minMax(arr) {
+//             function minMax(arr) {
 
-                for(let i = 0; i < arr.length; i++){
-                    for(let j = 0; j < arr.length ; j++){
-                        if(arr[j] > arr[j + 1]){
-                            let tem = arr[j];
-                            arr[j] = arr[j + 1];
-                            arr[j+1] = tem;
-                        }
-                    }
-                }
-                return arr
-            };
-           console.log(minMax(arr)); 
+//                 for(let i = 0; i < arr.length; i++){
+//                     for(let j = 0; j < arr.length ; j++){
+//                         if(arr[j] > arr[j + 1]){
+//                             let tem = arr[j];
+//                             arr[j] = arr[j + 1];
+//                             arr[j+1] = tem;
+//                         }
+//                     }
+//                 }
+//                 return arr
+//             };
+//            console.log(minMax(arr)); 
             
-           //Min Max Sum
+//            //Min Max Sum
 
-           function miniMaxSum(arr) {
-            arr.sort((a,b) => a - b);
+//            function miniMaxSum(arr) {
+//             arr.sort((a,b) => a - b);
             
-            let min = 0;
-            let max = 0;
+//             let min = 0;
+//             let max = 0;
             
-            for (let i = 0 ; i < arr.length; i++){        
-                if (i < arr.length - 1){
-                    min += arr[i];
-                }
+//             for (let i = 0 ; i < arr.length; i++){        
+//                 if (i < arr.length - 1){
+//                     min += arr[i];
+//                 }
                 
-                if (i != 0){
-                    max += arr[i];
-                }
-            }
-            console.log(min + " " + max)
-        }
+//                 if (i != 0){
+//                     max += arr[i];
+//                 }
+//             }
+//             console.log(min + " " + max)
+//         }
 
-        miniMaxSum(arr);
+//         miniMaxSum(arr);
 
-            // Time Converter
+//             // Time Converter
 
-            function timeConversion(s){
-                const period = s.slice(-2);
-                let [hour, minute, secods] = s.slice(0, -2).split(":")
+//             function timeConversion(s){
+//                 const period = s.slice(-2);
+//                 let [hour, minute, secods] = s.slice(0, -2).split(":")
             
-                if(period === 'AM'){
-                    if(hour === 12){
-                        hour = '00';
-                    }
-                    else{
-                        hour = hour.toString().padStart(2,'0');
-                    }
-                } else {
-                    hour = Number(hour)
-                    hour = (hour + 12).toString();
-                }
+//                 if(period === 'AM'){
+//                     if(hour === 12){
+//                         hour = '00';
+//                     }
+//                     else{
+//                         hour = hour.toString().padStart(2,'0');
+//                     }
+//                 } else {
+//                     hour = Number(hour)
+//                     hour = (hour + 12).toString();
+//                 }
                     
-                return `${hour}:${minute}:${secods}`;
-            }
+//                 return `${hour}:${minute}:${secods}`;
+//             }
 
-        console.log(timeConversion('05:03:55PM'))
+//         console.log(timeConversion('05:03:55PM'))
 
-        //FizzBuss
+//         //FizzBuss
 
-        function FizzBuss (n) {
-            for(let i = 1; i <= n; i++ ){
-                if(i % 3 === 0 && i % 5 === 0){
-                    console.log('FizzBuzz');
-                } else if (i % 3 === 0){
-                    console.log('Fizz');
-                } else if (i % 5 === 0){
-                    console.log('Buzz');
-                }
-                console.log(i);
-            }
-        }
-        const n = 15;
-        FizzBuss(n);
+//         function FizzBuss (n) {
+//             for(let i = 1; i <= n; i++ ){
+//                 if(i % 3 === 0 && i % 5 === 0){
+//                     console.log('FizzBuzz');
+//                 } else if (i % 3 === 0){
+//                     console.log('Fizz');
+//                 } else if (i % 5 === 0){
+//                     console.log('Buzz');
+//                 }
+//                 console.log(i);
+//             }
+//         }
+//         const n = 15;
+//         FizzBuss(n);
 
 
-    const arr1 = [
-        [ 1, 1, 1, 0, 0, 0],
-        [ 0, 1, 0, 0, 0, 0],
-        [ 1, 1, 1, 0, 0, 0],
-        [ 0, 0, 2, 4, 4, 0],
-        [ 0, 0, 0, 2, 0, 0],
-        [ 0, 0, 1, 2, 4, 0]
-        ]
+//     const arr1 = [
+//         [ 1, 1, 1, 0, 0, 0],
+//         [ 0, 1, 0, 0, 0, 0],
+//         [ 1, 1, 1, 0, 0, 0],
+//         [ 0, 0, 2, 4, 4, 0],
+//         [ 0, 0, 0, 2, 0, 0],
+//         [ 0, 0, 1, 2, 4, 0]
+//         ]
 
-    function hourglassSum (arr){
-        let max = -63;
+//     function hourglassSum (arr){
+//         let max = -63;
 
-        for(let i = 0; i <= 3; i++){
-            let add;
+//         for(let i = 0; i <= 3; i++){
+//             let add;
 
-            for(let j = 0; j <= 3; j++){
-                add =   arr[i][j] + arr[i][j+1] + arr[i][j+2] +
-                                    arr[i+1][j+1] +
-                        arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
+//             for(let j = 0; j <= 3; j++){
+//                 add =   arr[i][j] + arr[i][j+1] + arr[i][j+2] +
+//                                     arr[i+1][j+1] +
+//                         arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
 
-                if(max < add){
-                    max = add;
-                }
-            }
-        }
-        return max;
-    }
+//                 if(max < add){
+//                     max = add;
+//                 }
+//             }
+//         }
+//         return max;
+//     }
 
-   console.log(hourglassSum(arr1));
+//    console.log(hourglassSum(arr1));
 
+
+   // Select all elements with the class 'number'
+// const nodeList = document.querySelectorAll('.number');
+
+// // Log the NodeList to the console
+// console.log('NodeList:', nodeList);
+
+// // Convert the NodeList to an array using Array.from()
+// const arrayFromNodeList = Array.from(nodeList);
+
+// // Convert the NodeList to an array using the spread operator
+// // const arrayFromNodeListSpread = [...nodeList];
+
+// // Extract the text content from each element to get the array of numbers
+// const numberArray = arrayFromNodeList.map(node => parseInt(node.textContent, 10));
+
+// console.log('Array from NodeList using Array.from():', arrayFromNodeList);
+// // console.log('Array from NodeList using spread operator:', arrayFromNodeListSpread);
+// console.log('Array of numbers:', numberArray);
+
+
+let l1 = arrayToList([9, 9, 9, 9, 9, 9]);
+let l2 = arrayToList([9, 9, 9, 9]);
+
+printList(l1); // Expected output: 9 -> 9 -> 9 -> 9 -> 9 -> 9
+printList(l2); // Expected output: 9 -> 9 -> 9 -> 9
+
+// console.log(l1);
     </script>
 </body>
 </html>

@@ -98,5 +98,31 @@ public class arr {
 
             // System.out.println(Arrays.toString(arr));
 
+
+            int l1[] = {9,9,9,9,1,9,5};
+            int l2[] = {9,9,8,2};
+
+            
+
+            String l1str = new String();
+            String l2str = new String();
+
+            for(int i = l1.length -1; i >= 0; i --)
+            {
+                l1str += l1[i];
+            }
+            for(int i = l2.length -1; i >= 0; i --)
+            {
+
+                l2str += l2[i];
+            }
+            System.out.println(l1str);
+            System.out.println(l2str);
+
+            int sum = Integer.parseInt(l1str) + Integer.parseInt(l2str);
+
+            char[] CharArray = String.valueOf(sum).toCharArray();
+            
+            System.out.println(CharArray);
     }
 }
