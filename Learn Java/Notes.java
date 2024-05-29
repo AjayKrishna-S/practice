@@ -1,33 +1,17 @@
-class A                     // A (super) class //every class in java has "extends Object" as a super class
+
+
+class A
 {
-    public A()            // Default Constructoe    // every constructor has "super();" method even it's not metioned.
+    public A()
     {
-        super();
-        System.out.println("in A");
+        System.out.println("object created");
     }
 
-    public A(int n)         // Parameterize Constructoe
+    public void show()
     {
-        System.out.println("in A int");
+        System.out.println("in A show");
     }
 }
-
-class B extends A       // B Sub class
-{
-
-    public B()
-    {   
-        super();
-        System.out.println("in B");
-    }
-
-    public B(int  n)          // Parameterize Constructoe
-    {
-        this();               // this(); will call constructor of same class - (B())      
-        System.out.println("in B int");
-    }
-}
-
 
 
 public class Notes
@@ -36,12 +20,20 @@ public class Notes
     public static void main(String args[])
     {
 
-        //Contructors, default constructors, parameterized constructors
+       // Naming Convinsion
 
+            // Class and Interface - Calc, Runable
+            // variable and method - marks, show()
+            // constants - PIE, BRAND
 
+       //camel casing
 
-        //This & Super
+            //showMyMark();
+            //MyData
 
-        B obj = new B(5);
+        // Human() - contructor
+
+        new A().show(); // anonymous onject
+
     }
 }
