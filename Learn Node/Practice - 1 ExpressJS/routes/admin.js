@@ -1,15 +1,15 @@
 const express = require('express')
 const router = express.Router();
+const path = require('path')
 
-router.get('/add-product',(req,res,next)=>{     //middle ware
+router.get('/add-product',(req,res,next)=>{
     console.log("first middle ware");
-    res.send('<h1>Hello</h1><form action="/store-product" method="POST"><input type="text" name="message" /> <input type="submit" /> ');
-    next();
+    res.sendFile(path.join(__dirname,'..','view','add-product.html'));
 })
 
-router.post('/store-product',(req,res,next)=>{     //middle ware
+router.post('/store-product',(req,res,next)=>{
     console.log('form data: ',req.body);
-    res.send('<h1>Hello</h1>');
+    res.sendFile(path.join(__dirname,'..','view','store-product.html'));
 })
 
 module.exports = router;
