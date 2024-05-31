@@ -1,20 +1,11 @@
-const http = require('http')
 const express = require('express');
-
-
 const app = express();
+const bodyParser = require('body-parser');          //body-parser package
 
-app.use((req,res,next)=>{
-    console.log("first middle ware");
-    next();
-})
-app.use((req,res,next)=>{
-    console.log("second middle ware");
-    next();
-})
-app.use((req,res,next)=>{
-    console.log("third middle ware");
-})
+app.use(bodyParser.urlencoded());               //automatically next();
+const adminRoutes = require('./routes/admin')
 
-const server = http.createServer(app);
-server.listen(3000)
+app.use(adminRoutes)
+
+
+app.listen(3000)
