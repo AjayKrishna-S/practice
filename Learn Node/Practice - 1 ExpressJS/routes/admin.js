@@ -9,8 +9,8 @@ router.get('/add-product',(req,res,next)=>{
 })
 
 router.post('/store-product',(req,res,next)=>{
+    res.send('<h2>Submited</h2>')
     console.log('form data: ',req.body);
-    res.sendFile(path.join(rootDir,'view','store-product.html'));
 })
 
 module.exports = router;

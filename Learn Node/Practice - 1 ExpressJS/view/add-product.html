@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>app-product</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <Nav>
         <ul>
-            <li>add-product</li>
-            <li>store-product</li>
+            <li><a href="http://localhost:3000/">Shop</a></li>
+            <li><a href="http://localhost:3000/admin/add-product">Add Product</a></li>
         </ul>
     </Nav>
     <main>
-        <h1>Hello</h1>
+        <h1>Add Product</h1>
         <form 
-        action="http://localhost:3000/admin/store-product" method="POST">
-            <input type="text" name="message" /> 
-            <input type="submit" />
+        action="/admin/store-product" method="POST">
+            <input type="text" placeholder="Add Product" name="message" /> 
+            <button type="submit">Submit</button>
     </main>
 </body>
 </html>
