@@ -13,7 +13,7 @@ const { request } = require('https');
         cb(null,'uploads');
     },
     filename :function(req ,file ,cb){
-        cb(null, file.filename + '_' + Date.now() + path.extname(file.originalname))
+        cb(null, file.originalname.replace(/\.[^/.]+$/,"") + '_' + Date.now() + path.extname(file.originalname))
     }
 })
  
@@ -29,7 +29,7 @@ let upload = multer({
         let filetype = /jpeg|jpg|png/;
         let mimetype = filetype.test(file.mimetype);
         let extname = filetype.test(path.extname(file.originalname).toLowerCase())
-        
+
         if(mimetype && extname){
             return cb(null, true)
         }
@@ -45,6 +45,9 @@ app.get('/',(req,res)=>{
 app.post('/upload',(req,res,next)=>{
     upload(req,res,(err)=>{
         if(err){
+            if(err instanceof multer.MulterError && err.code === "LIMIT_FILE_SIZE"){
+                return res.send('Maximum file size is 2mb')
+            }
             res.send(err);
         }else{
             res.send("<h1>Success. Img uploaded!</h1>")
