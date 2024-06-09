@@ -152,3 +152,24 @@ public class Notes
         }
 
 -----------------------------------------------------------------------------
+
+
+//packages
+
+packages com.toos;
+java.lan.* for select all files
+package shout be unicq
+
+---------------------------------------------------------------------------------
+ // access modifiers
+
+ //polimarisum
+
+ //final key word
+    variable - when using final we cannot change the value(constants)
+    method - it avoids methos over writing(avid inheritance)
+    class - cannot use extends class.
+----------------------------------------------------------------------------------
+
+//object class 7:22
+    //in java every class extends the object
